@@ -7,14 +7,14 @@ import icon5 from '../../assets/c5.png'
 import './Timeline.css'
 
 const section1 = [
-    {icon: icon1, heading: 'Ready to Go Algos', description: '  We have ready accelerators embedded with learnings from hundreds of past projects, generating actionable results.' },
-    {icon: icon2, heading: 'Internal capability building', description: 'We productize all our work, enhance them with the latest AI technology, and train your internal teams to leverage them.' }
+    {id: 1, icon: icon1, heading: 'Ready to Go Algos', description: '  We have ready accelerators embedded with learnings from hundreds of past projects, generating actionable results.' },
+    {id: 2, icon: icon2, heading: 'Internal capability building', description: 'We productize all our work, enhance them with the latest AI technology, and train your internal teams to leverage them.' }
 ]
 
 const section2 = [
-    {icon: icon3, heading: 'Multi-source data', description: 'Our solutions work with old, new, or incomplete datasets, in different formats, and from varied sources.' },
-    {icon: icon4, heading: 'Stakeholder alignment', description: 'No black boxes. Stakeholders understand the “how”, “so what” and “now what”, leading to clear decision-making trade offs.' },
-    {icon: icon5, heading: 'Continuous engagement', description: 'We engage in the long-term to enhance, course-correct, and adopt new models to continuously refine your work.' }
+    {id: 1, icon: icon3, heading: 'Multi-source data', description: 'Our solutions work with old, new, or incomplete datasets, in different formats, and from varied sources.' },
+    {id: 2, icon: icon4, heading: 'Stakeholder alignment', description: 'No black boxes. Stakeholders understand the “how”, “so what” and “now what”, leading to clear decision-making trade offs.' },
+    {id: 3, icon: icon5, heading: 'Continuous engagement', description: 'We engage in the long-term to enhance, course-correct, and adopt new models to continuously refine your work.' }
 
     
 ]
@@ -27,7 +27,7 @@ const Timeline = () => {
         <div className='timeline-background'></div>
         <div className='upper-section-container'>
             {section1.map(content => (
-                  <div className='content-card'>
+                  <div key={content.id} className='content-card'>
                 <img src={content.icon} alt="card-icon"/>
                 <h5 className='card-heading'>
                     {content.heading}
@@ -52,7 +52,7 @@ const Timeline = () => {
         </div>
          <div style={{marginTop: '30px'}} className='upper-section-container'>
             {section2.map(content => (
-                  <div className='content-card'>
+                  <div key={content.id} className='content-card'>
                 <img src={content.icon} alt="card-icon"/>
                 <h5 className='card-heading'>
                     {content.heading}

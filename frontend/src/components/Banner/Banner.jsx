@@ -1,16 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import BannerLeft from '../../assets/BannerLeft.png'
 import BannerRight from '../../assets/BannerRight.png'
+import { AppContext } from '../../context/AppContext'
+import axios from 'axios'
 import './Banner.css'
 
 const Banner = () => {
+
+  const { url, headline, showCms } = useContext(AppContext)
+  const headlines = headline.split(' ')
+  console.log(headlines)
+  const headlineLength = headlines.length 
+  const start = headlineLength/3
+  const end =  headlineLength/3 + start;
+  const sp = headlines.slice(start, end)
+  const f = headlines.slice(0, start)
+  const e = headlines.slice(end, headlineLength)
+  console.log(f, sp, e)
+  console.log(headline)
   return (
     <div className='banner-container'>
        <img src={BannerLeft} alt="banner-left" className='banner-left-image' />
-       <div className='banner-content-container'>
+       <div className={`banner-content-container ${!showCms ? 'edit-index' : ''}`}>
             <h1 className='banner-heading'>
-                Hyper boost your <span style={{color: '#FFBD59'}}> Revenue Management, Marketing 
-                    </span> and Commercial Functions with Business Ready AI
+                {f.join(' ')} <span style={{color: '#FFBD59'}}>{sp.join(' ')}</span> {e.join(' ')}
             </h1>
             <p className='banner-decription'>
                 Powerful AI solutions that go beyond mere data sorting and exploration.

@@ -33,4 +33,14 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.delete('/heading', async(req, res) => {
+    try {
+        await Heading.deleteMany()
+        res.status(200).json({message: "deleted"})
+    } catch (error) {
+        console.error(error)
+         res.status(500).json({error: 'Internal server error'})
+    }
+})
+
 module.exports = router

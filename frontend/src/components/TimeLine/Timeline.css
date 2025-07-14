@@ -111,8 +111,10 @@
   }
   .line-container::before {
     width: 100%;
-    height: var(--before-height);
+    height: var(--before-width);
     border-radius: 7px 7px 0 0;
+    top: 0;
+    left: 0;
   }
 }
 

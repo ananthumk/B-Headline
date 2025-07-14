@@ -1,0 +1,101 @@
+.cms-container {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.edit-container{
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 4px;
+    font-family: fantasy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: none;
+    z-index: 1;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    font-family: Comic Sans MS ;
+}
+
+.buttons{
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    outline: none;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font-family: Comic Sans MS ;
+    font-style: italic;
+}
+
+.h-btn{
+    margin-bottom: 25%;
+}
+
+.text-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+}
+
+.text-container{
+    border-radius: 4px;
+    width: 250px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #FFF;
+    border: none;
+    outline: none;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.btn-container{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+@media screen and (max-width: 866px) {
+    .edit-container{
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 419px) {
+    .edit-container{
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 20px;
+    }
+    .h-btn{
+        margin-bottom: 0;
+    }
+    .text-container{
+        width: 90%;
+    }
+}
