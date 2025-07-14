@@ -66,7 +66,9 @@
     background-color: #FFF;
     border: none;
     outline: none;
+    flex-wrap: wrap;
 }
+
 
 .btn{
     cursor: pointer;
